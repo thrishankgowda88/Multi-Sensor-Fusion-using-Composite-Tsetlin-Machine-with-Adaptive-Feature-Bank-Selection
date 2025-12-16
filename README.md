@@ -94,7 +94,7 @@ Time-to-frequency domain features are extracted using the `feature_extraction_gi
 To extract the time-to-frequency features from the dataset, run:
 
 ```bash
-python feature_extraction_git.py --input_data_dir <your_dir>
+python feature_extraction.py --input_data_dir <your_dir>
 ```
 
 
@@ -174,3 +174,5 @@ To generate the accuracy curves, run:
 ```bash
 python plot_composite_curve.py --csv_path single_and_all4.csv --B 1
 ```
+
+
