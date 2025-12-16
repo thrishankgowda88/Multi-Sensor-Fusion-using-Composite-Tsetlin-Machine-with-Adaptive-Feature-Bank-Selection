@@ -153,7 +153,7 @@ python mafaulda_adaptive_learning.py \
     --bits 3 \
     --epochs 140 \
     --input_dir avg_acc
-
+```
 
 ## Running Composite Multi-Sensor Fusion
 
@@ -163,7 +163,7 @@ To run the composite fusion, execute:
 
 ```bash
 python composite_TM.py
-
+```
 
 ## Plotting Accuracy Curves
 
@@ -173,4 +173,4 @@ To generate the accuracy curves, run:
 
 ```bash
 python plot_composite_curve.py --csv_path single_and_all4.csv --B 1
-
+```
