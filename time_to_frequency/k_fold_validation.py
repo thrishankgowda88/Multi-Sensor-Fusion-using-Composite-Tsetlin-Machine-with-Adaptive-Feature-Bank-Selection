@@ -66,7 +66,7 @@ def load_csv_features(csv_file):
 
 # --- Load raw (continuous) features for all feature banks ---
 mfcc_X, y_mfcc      = load_csv_features(f"mfcc/channel_{args.channel}.csv")
-spectral_X, y_spec  = load_csv_features(f"other/channel_{args.channel}.csv")
+spectral_X, y_spec  = load_csv_features(f"sd/channel_{args.channel}.csv")
 stft_X, y_stft      = load_csv_features(f"stft/channel_{args.channel}.csv")
 
 # Sanity check: labels must match across feature representations
@@ -195,7 +195,7 @@ for fold_idx, (train_idx, test_idx) in enumerate(skf.split(mfcc_X, y_all), start
     final_acc = 0.0
 
     # Same as your "for i in range(140)" loop
-    for i in range(140):
+    for i in range(2):
         batch_data_log = {}
 
         tm.fit(x_train, y_train)
@@ -242,8 +242,8 @@ all_folds_log['std_accuracy'] = std_acc
 # Root folder for all k-fold logs
 log_root = "kfold_logs"
 
-# Subfolder per channel and per k (e.g., kfold_logs/channel_1/k5/)
-log_dir = os.path.join(log_root, f"channel_{args.channel}", f"k{k_folds}")
+# Subfolder per channel and per k (e.g., kfold_logs/channel_1/)
+log_dir = os.path.join(log_root, f"channel_{args.channel}")
 
 # Create the directory if it doesn't exist
 os.makedirs(log_dir, exist_ok=True)
