@@ -22,6 +22,7 @@ parser.add_argument("--T", type=int, default=22, help="value of threshold")
 parser.add_argument("--s", type=float, default=3, help="value of specificity")
 parser.add_argument("--bits", type=int, default=3, help="max_bits_per_feature")
 parser.add_argument("--epochs", type=int, default=140, help="number of epochs in training phase")
+parser.add_argument("--input_dir", type=str, default='avg_acc', help="give_input_dir")
 args = parser.parse_args()
 
 
@@ -46,7 +47,8 @@ def tm_classifier(
         s=s,
         platform=platform,
         weighted_clauses=weighted_clauses,
-        feature_negation=feature_negation
+        feature_negation=feature_negation,
+        seed=42
     )
 
 
@@ -248,7 +250,7 @@ for i in range(args.epochs):
 
 import os
 # Define the directory
-dir_name = "avg_acc"
+dir_name = args.input_dir
 
 # Create the directory if it doesn't exist
 os.makedirs(dir_name, exist_ok=True)
