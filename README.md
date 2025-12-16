@@ -43,18 +43,19 @@ After downloading, extract the dataset and place the CSV files in the appropriat
 ## Dataset Directory Structure and Class Definition
 
 The MaFaulDa dataset is organized into a hierarchical directory structure, where fault types are grouped based on machine configuration and fault location. The actual directory structure is shown below:
+```text
 mafaulda/
 ├── horizontal-misalignment/
 ├── imbalance/
 ├── normal/
 ├── overhang/
-│ ├── ball_fault/
-│ ├── cage_fault/
-│ └── outer_race/
+│   ├── ball_fault/
+│   ├── cage_fault/
+│   └── outer_race/
 ├── underhang/
-│ ├── ball_fault/
-│ ├── cage_fault/
-│ └── outer_race/
+│   ├── ball_fault/
+│   ├── cage_fault/
+│   └── outer_race/
 └── vertical-misalignment/
 
 In this structure:
