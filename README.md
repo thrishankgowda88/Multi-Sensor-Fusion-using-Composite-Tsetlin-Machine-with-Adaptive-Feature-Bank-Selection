@@ -27,7 +27,7 @@ The approach is designed to improve robustness and performance by dynamically se
 ---
 
 ## `mafaulda_adaptive_learning.py`
-
+Supports configurable clauses, threshold, specificity, bit-resolution, and
 This script operates in **two sequential phases**:
 
 ### 1. Feature-Bank Selection Phase
@@ -39,7 +39,20 @@ This script operates in **two sequential phases**:
 
 ### 2. Training Phase
 - Trains a Tsetlin Machine using the selected feature bank(s).
-- Supports configurable clauses, threshold, specificity, bit-resolution, and epochs.
+- The number of epochs to be trained in the training phase is decided by **`epochs`**  .
+
+---
+
+## Sensor Channel Mapping
+
+The following mapping is used throughout all experiments:
+
+| Channel ID | Sensor |
+|---------|--------|
+| `0` | Tachometer |
+| `1` | Accelerometer-1 |
+| `4` | Accelerometer-2 |
+| `7` | Microphone |
 
 ---
 
@@ -56,3 +69,24 @@ python mafaulda_adaptive_learning.py \
     --bits 3 \
     --epochs 140 \
     --input_dir avg_acc
+
+
+## Running Composite Multi-Sensor Fusion
+
+After completing the single-sensor adaptive learning runs, composite multi-sensor fusion is performed using the Composite Tsetlin Machine. This step combines information from multiple sensors.
+
+To run the composite fusion, execute:
+
+```bash
+python composite_TM.py
+
+
+## Plotting Accuracy Curves
+
+The accuracy curves for single-sensor models and the composite multi-sensor model are generated using the `plot_composite_curve.py` script. This script reads the stored accuracy values from a CSV file and visualizes the performance across training phases.
+
+To generate the accuracy curves, run:
+
+```bash
+python plot_composite_curve.py --csv_path single_and_all4.csv --B 1
+
