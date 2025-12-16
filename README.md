@@ -14,6 +14,81 @@ The approach is designed to improve robustness and performance by dynamically se
 
 ---
 
+##Dataset used
+The **MaFaulDa (Machinery Fault Database)** is a comprehensive dataset designed for the analysis and classification of machinery faults. It is widely used for developing and evaluating machine learning models for fault diagnosis in rotating machinery.
+
+---
+
+### Dataset Description
+
+The MaFaulDa dataset consists of **1951 multivariate time-series signals** acquired from sensors mounted on **SpectraQuest’s Machinery Fault Simulator (MFS) Alignment–Balance–Vibration (ABVT)** platform.
+
+The dataset includes **six different simulated operating conditions**:
+
+- Normal operation  
+- Imbalance fault  
+- Horizontal misalignment fault  
+- Vertical misalignment fault  
+- Inner bearing fault  
+- Outer bearing fault  
+
+### Data Access and Usage
+
+The MaFaulDa dataset can be downloaded from Kaggle:
+
+- **Dataset link:** https://www.kaggle.com/datasets/vuxuancu/mafaulda-full
+
+After downloading, extract the dataset and place the CSV files in the appropriate input directory as required by the Feature extraction pipline.
+
+## Dataset Directory Structure and Class Definition
+
+The MaFaulDa dataset is organized into a hierarchical directory structure, where fault types are grouped based on machine configuration and fault location. The actual directory structure is shown below:
+mafaulda/
+├── horizontal-misalignment/
+├── imbalance/
+├── normal/
+├── overhang/
+│ ├── ball_fault/
+│ ├── cage_fault/
+│ └── outer_race/
+├── underhang/
+│ ├── ball_fault/
+│ ├── cage_fault/
+│ └── outer_race/
+└── vertical-misalignment/
+
+In this structure:
+- `horizontal-misalignment`, `vertical-misalignment`, `imbalance`, and `normal` are top-level fault categories.
+- `overhang` and `underhang` contain **sub-faults** related to bearing defects:
+  - `ball_fault`
+  - `cage_fault`
+  - `outer_race`
+
+---
+
+## Class Reorganization (10-Class Setup)
+
+In this work, **each sub-folder is treated as an independent class**, rather than grouping them under a parent category.  
+This converts the original hierarchical structure into a **10-class classification problem**.
+
+The resulting class definition is:
+
+1. Normal  
+2. Imbalance  
+3. Horizontal misalignment  
+4. Vertical misalignment  
+5. Overhang – ball fault  
+6. Overhang – cage fault  
+7. Overhang – outer race fault  
+8. Underhang – ball fault  
+9. Underhang – cage fault  
+10. Underhang – outer race fault 
+
+
+
+--input_data_dir
+
+
 ## Repository Contents
 
 | File | Description |
