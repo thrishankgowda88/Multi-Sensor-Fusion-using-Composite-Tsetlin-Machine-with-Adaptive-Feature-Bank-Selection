@@ -71,6 +71,7 @@ In this structure:
 
 In this work, **each sub-folder is treated as an independent class**, rather than grouping them under a parent category.  
 This converts the original hierarchical structure into a **10-class classification problem**.
+Store them in a dir to extract time to frequency features.
 
 The resulting class definition is:
 
@@ -94,6 +95,7 @@ To extract the time-to-frequency features from the dataset, run:
 
 ```bash
 python feature_extraction_git.py --input_data_dir <your_dir>
+```
 
 
 ## Repository Contents
