@@ -64,7 +64,7 @@ In this structure:
   - `ball_fault`
   - `cage_fault`
   - `outer_race`
-
+```
 ---
 
 ## Class Reorganization (10-Class Setup)
