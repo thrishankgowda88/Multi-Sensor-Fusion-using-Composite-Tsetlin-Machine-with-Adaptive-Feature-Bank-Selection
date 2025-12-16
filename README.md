@@ -86,8 +86,14 @@ The resulting class definition is:
 10. Underhang – outer race fault 
 
 
+## Feature Extraction
 
---input_data_dir
+Time-to-frequency domain features are extracted using the `feature_extraction_git.py` script.
+
+To extract the time-to-frequency features from the dataset, run:
+
+```bash
+python feature_extraction_git.py --input_data_dir <your_dir>
 
 
 ## Repository Contents
