@@ -1,0 +1,5 @@
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.11.4
+tmu==0.8.3
