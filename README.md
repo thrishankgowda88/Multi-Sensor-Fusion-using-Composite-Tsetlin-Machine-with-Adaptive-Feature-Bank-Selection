@@ -37,9 +37,10 @@ The MaFaulDa dataset can be downloaded from Kaggle:
 
 - Dataset link: https://www.kaggle.com/datasets/vuxuancu/mafaulda-full
 
-**Downloading data if optional frequency-domain features are already provided in the `time_to_frequency/` directory. If users wish to extract the time-to-frequency features manually from the raw time-series data.**
+**Downloading data if optional frequency-domain features are already provided in the `time_to_frequency/` directory.
+If users wish to extract the time-to-frequency features manually from the raw time-series data then download.**
 
-After downloading, extract the dataset and place the CSV files in the appropriate input directory as required by the Feature extraction pipline.
+After downloading, extract the dataset and place the CSV files in the appropriate input directory as required by the Feature extraction pipline explained in ** Required Class Reorganization (10-Class Setup)**.
 
 ## Dataset Directory Structure and Class Definition
 
