@@ -89,7 +89,7 @@ The resulting class definition is:
 
 ## Feature Extraction
 
-Time-to-frequency domain features are extracted using the `feature_extraction_git.py` script.
+Time-to-frequency domain features are extracted using the `feature_extraction.py` script.
 
 To extract the time-to-frequency features from the dataset, run:
 
