@@ -33,10 +33,11 @@ The dataset includes **six different simulated operating conditions**:
 - Outer bearing fault  
 
 ### Data Access and Usage
-
 The MaFaulDa dataset can be downloaded from Kaggle:
 
-- **Dataset link:** https://www.kaggle.com/datasets/vuxuancu/mafaulda-full
+- Dataset link: https://www.kaggle.com/datasets/vuxuancu/mafaulda-full
+
+Optional frequency-domain features are already provided in the `time_to_frequency/` directory. If users wish to extract the time-to-frequency features manually from the raw time-series data.
 
 After downloading, extract the dataset and place the CSV files in the appropriate input directory as required by the Feature extraction pipline.
 
@@ -67,7 +68,7 @@ In this structure:
 ```
 ---
 
-## Class Reorganization (10-Class Setup)
+## Required Class Reorganization (10-Class Setup)
 
 In this work, **each sub-folder is treated as an independent class**, rather than grouping them under a parent category.  
 This converts the original hierarchical structure into a **10-class classification problem**.
