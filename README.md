@@ -141,21 +141,6 @@ The following mapping is used throughout all experiments:
 
 ---
 
-## Running Single-Sensor Experiments
-
-Use the following command format:
-
-```bash
-python mafaulda_adaptive_learning.py \
-    --channel 7 \
-    --clause 30 \
-    --T 22 \
-    --s 3.0 \
-    --bits 3 \
-    --epochs 140 \
-    --input_dir avg_acc
-```
-
 ## Running Composite Multi-Sensor Fusion
 
 After completing the single-sensor adaptive learning runs, composite multi-sensor fusion is performed using the Composite Tsetlin Machine. This step combines information from multiple sensors.
@@ -176,4 +161,17 @@ To generate the accuracy curves, run:
 python plot_composite_curve.py --csv_path single_and_all4.csv --B 1
 ```
 
+## Running Single-Sensor Experiments
 
+Use the following command format:
+
+```bash
+python mafaulda_adaptive_learning.py \
+    --channel 7 \
+    --clause 30 \
+    --T 22 \
+    --s 3.0 \
+    --bits 3 \
+    --epochs 140 \
+    --input_dir avg_acc
+```
